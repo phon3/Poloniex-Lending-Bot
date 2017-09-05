@@ -206,13 +206,13 @@ if __name__ == '__main__':
 	log.log('Welcome to Poloniex Lending Bot')
 	while True:
 		try:
-            refreshTotalLended()
+            		refreshTotalLended()
 			log.refreshStatus(stringifyTotalLended())
 			cancelAndLoanAll()
-        except Exception as e:
-                log.log("ERROR: " + str(e))
-				pass
+	        except Exception as e:
+        	        log.log("ERROR: " + str(e))
+			pass
 		except KeyboardInterrupt:
-				print '\nbye'
-				exit(0)
+			print '\nbye'
+			exit(0)
         time.sleep(sleepTime)
